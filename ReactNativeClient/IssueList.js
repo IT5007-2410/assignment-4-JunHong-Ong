@@ -135,11 +135,11 @@ function IssueRow(props) {
       /****** Q3: Start Coding here. Create an issue from state variables and call createIssue. Also, clear input field in front-end******/
       const inputs = this.state.inputs;
 
-      if (!('owner' in inputs)) {
+      if (!('owner' in inputs) | (inputs.owner == "")) {
         alert("The field 'Owner' is required.");
-      } else if (!('title' in inputs)) {
+      } else if (!('title' in inputs) | (inputs.title == "")) {
         alert("The field 'Title' is required.");
-      } else if (!('effort' in inputs)) {
+      } else if (!('effort' in inputs) | (inputs.effort == "")) {
         alert("The field 'Effort' is required.");
       } else {
         const issue = {
